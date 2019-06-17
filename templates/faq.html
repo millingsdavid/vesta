@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vesta | The Bottom Line</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/faq.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Iceland|Oswald|Pacifico|Raleway|Roboto&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header id="home">
+        <div class="menu">
+            <span class="bar"></span>
+        </div>
+        <nav class="nav">
+            <p>
+                <a href="/" id="logo">Vesta</a>
+            </p>
+            <div class="overlay">
+                <ul>
+                        <li><a href="/register">Register</a></li>
+                        <li><a href="/#story">Our Story</a></li>
+                        <li><a href="/#about">About</a></li>
+                        <li><a href="/faq">FAQ</a></li>
+                        <li><a href="/#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <section class="container">
+                <h1>Frequently Asked Questions</h1>
+            <div class="accordion">
+                <div class="accordion-item">
+                <a>What is Vesta?</a>
+                <div class="content">
+                    <p>Vesta is a financial tracking tool that provides data such as a companies daily support & resistance data.</p>
+                </div>
+                </div>
+                <div class="accordion-item">
+                <a>What is a support?</a>
+                <div class="content">
+                    <p>Supports are the price level that an asset does not fall below for period of time.  The simple support level can be charted by drawing a line along the lowest lows for the time period being considered.</p>
+                </div>
+                </div>
+                <div class="accordion-item">
+                <a>What is a resistance?</a>
+                <div class="content">
+                    <p>Resistances are the price point at which the rise in the price of an asset is halted by the emergence of a growing number of sellers who wish to sell the at that price.  The simple resistance level can be charted by drawing a line along the highest highs for the time period being considered.</p>
+                </div>
+                </div>
+                <div class="accordion-item">
+                <a>Are there any future plans for Vesta?</a>
+                <div class="content">
+                    <p>Vesta is always improving! The most recent future state will notify users when support & resistance levels are met.</p>
+                </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <footer>
+        <div class="locations">
+            <h4>Locations</h4>
+            <div class="location">
+                <h5>123 Main Rd
+                    Columbia, SC 55555
+                </h5>
+            </div>
+        </div>
+
+        <div class="hours">
+            <h4>Hours</h4>
+            <div class="days">
+                <h5>
+                    Monday - Fiday <br>
+                    9:00am - 5:00pm
+                </h5>
+            </div>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/faq.js') }}"></script>
+</body>
+
+</html>

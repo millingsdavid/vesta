@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vesta | The Bottom Line</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/register.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Iceland|Oswald|Pacifico|Raleway|Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+<header id="home">
+    <div class="menu">
+        <span class="bar"></span>
+    </div>
+    <nav class="nav">
+        <p>
+            <a href="/" id="logo">Vesta</a>
+        </p>
+        <div class="overlay">
+            <ul>
+                <li><a href="/register">Register</a></li>
+                <li><a href="/#story">Our Story</a></li>
+                <li><a href="/#about">About</a></li>
+                <li><a href="/faq">FAQ</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="register" id="form">
+            <div class="container">
+                <div class="center">
+                    <h1 class="custom-font">Register</h1>
+                <div class="form-container add-flex">
+                    <form action="/register_submit" method="POST">
+                        <input type="text" class="input" id="input" placeholder="First Name" name="first_name">
+                        <input type="text" class="input" id="input" placeholder="Last Name" name="last_name">
+                        <input type="text" class="input"id="input" placeholder="Email" name="email">
+                        <input type="password" class="input" id="input" placeholder="Password" name="password">
+                        <input type="password" class="input" id="input" placeholder="Confirm Password" name="confirm_password">
+                        <input type="submit" class="input btn btn-submit" id="submit" value="Sign Up">
+                    </form>
+                    <div class="flash_messages">
+                            {% with messages = get_flashed_messages() %}
+                                {% if messages %}
+                                    {% for message in messages %}
+                                        <p>{{message}}</p>
+                                    {% endfor %}
+                                {% endif %}
+                            {% endwith %}
+                        </div>
+                </div>
+            </div>
+            </div>
+        </section>
+    </div>
+</header>
+    
+    <footer>
+        <div class="locations">
+            <h4>Locations</h4>
+            <div class="location">
+                <h5>123 Main Rd
+                    Columbia, SC 55555
+                </h5>
+            </div>
+        </div>
+
+        <div class="hours">
+            <h4>Hours</h4>
+            <div class="days">
+                <h5>
+                    Monday - Friday <br>
+                    9:00am - 5:00pm
+                </h5>
+            </div>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/register.js"></script>
+</body>
+</html>
